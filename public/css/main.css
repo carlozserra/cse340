@@ -1,30 +1,136 @@
-html, body {
-    background-color: lightblue;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 20px;
-}
+
+/* General */
 
 body {
-    nav {
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f5f7fa;
+  color: #222;
+}
 
-        li {
-            display: inline;
-            margin-right: 15px;
-        }
+/* Navigation */
 
-        a {
-            text-decoration: none;
-            color: #333;
-            font-weight: bold;
+nav {
+  background-color: #123b70;
+  padding: 18px;
+}
 
-            &:hover {
-                color: #0066cc;
-            }
-        }
-    }
-} 
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+
+main {
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+h1, h2, h3 {
+  color: #123b70;
+}
+
+p {
+  line-height: 1.6;
+}
+
+li {
+  list-style: none;
+  text-align: left;
+  margin-bottom: 25px;
+}
+
+/* Organizations */
+
+main ul {
+  padding: 0;
+}
+
+main li {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+/* Images */
+
+.main-logo {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  display: block;
+  margin: 20px auto;
+}
+
+li img {
+  width: 100px;
+  max-width: 100%;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+/* Footer */
+
+footer {
+  background-color: #123b70;
+  color: white;
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+}
+
+footer p,
+footer a {
+  color: white;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+
+  main {
+    margin: 15px auto;
+    padding: 15px;
+  }
+
+  main li {
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  li img {
+    display: block;
+    width: 90px;
+    max-width: 100%;
+    height: 90px;
+    object-fit: contain;
+    margin: 10px auto;
+    border-radius: 6px;
+  }
+}

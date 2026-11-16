@@ -72,3 +72,47 @@ VALUES
 (3, 'Senior Center Volunteer Day', 'Spend a day volunteering at the local senior center, assisting with activities and events.', '357 Poplar St, Hometown', '2024-09-20'),
 (3, 'Community Health Fair', 'Participate in organizing a health fair to provide free screenings and health education.', '468 Fir St, Hometown', '2024-10-30'),
 (3, 'Neighborhood Safety Workshop', 'Help conduct workshops on neighborhood safety and emergency preparedness.', '579 Hemlock St, Hometown', '2024-11-15');
+
+-- ========================================
+-- Insert sample data: Categories
+-- ========================================
+
+INSERT INTO categories (name)
+VALUES
+    ('Educational'),
+    ('Community Service'),
+    ('Environmental'),
+    ('Health and Wellness');
+
+-- ========================================
+-- Associate Projects with Categories
+-- ========================================
+
+INSERT INTO project_categories (project_id, category_id)
+VALUES
+    -- BrightFuture Builders
+    (1, 2),
+    (2, 3),
+    (2, 2),
+    (3, 2),
+    (4, 3),
+    (4, 1),
+    (5, 1),
+
+    -- GreenHarvest Growers
+    (6, 3),
+    (6, 1),
+    (7, 3),
+    (8, 1),
+    (8, 3),
+    (9, 2),
+    (9, 3),
+    (10, 1),
+
+    -- UnityServe Volunteers
+    (11, 2),
+    (12, 2),
+    (13, 4),
+    (14, 4),
+    (14, 1),
+    (15, 4);
